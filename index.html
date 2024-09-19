@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Color Palette Generator</h1>
+
+<!-- Form for user-defined palette generation -->
+<form id="colorForm">
+  <input type="text" id="name" placeholder="Enter a prompt/name" required>
+  <input type="number" id="palette-size" placeholder="Palette size" min="4" max="16" required>
+  <button type="submit">Generate Palette</button>
+</form>
+
+<!-- Input for random palette size -->
+<div>
+  <label for="random-palette-size">Random Palette Size:</label>
+  <input type="number" id="random-palette-size" placeholder="Random palette size" min="4" max="16" value="5">
+</div>
+
+<!-- Button to randomize palette -->
+<button id="randomizeButton">Randomize Palette</button>
+
+<!-- Container to display the generated palette -->
+<div id="paletteContainer"></div>
+
+<!-- Buttons for actions after generating a palette -->
+<div id="buttonsContainer" style="display: none;">
+  <button id="copyButton">Copy Palette</button>
+  <button id="saveButton">Save Palette</button>
+  <button id="shareButton">Share Palette</button>
+  <button id="exportJSONButton">Export as JSON</button>
+  <button id="exportImageButton">Export as Image</button>
+</div>
+
+<!-- Watermark GIF/Instagram Link-->
+ <a href="https://www.instagram.com/tinyspacegremlin" target="_blank" id="watermark">
+ <img src="images/TSG-Watermark.gif" id="watermark" alt="Watermark"/>
+</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
