@@ -1,90 +1,215 @@
-/* Global Styles */
+/*General Styles */
+
 body {
-  background-color: #7691aa;
-  color: #000000;
-  font-family: Arial, sans-serif;
+  background-image: linear-gradient( 180deg, #C073E6, #E673D3, #E67399);
   text-align: center;
   padding: 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-h1 {
-  color: #000000;
+
+#mainTitle {
+  font-family: 'Rockwell';
 }
 
-input, button {
-  padding: 10px;
-  margin: 5px;
-  font-size: 1em;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+#genBtn {
+  font-family: 'Century Gothic';
+  background-color: #fff;
 }
 
-/* Button Styles */
-button {
-  background-color: hsl(350, 68%, 48%);
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+#userInput {
+  font-family: 'Century Gothic';
 }
 
-button:hover {
-  background-color: #e95a79;
+#userSize {
+  font-family: 'Century Gothic';
 }
 
-/* Palette Container */
-#paletteContainer {
+#colorContain {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allow color boxes to wrap on smaller screens */
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
 .colorBox {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  border-radius: 5px;
-  transition: border 0.3s ease;
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  border-radius: 20px;
+  border: #000 solid 3px;
 }
 
-#copyButton {
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#copyButton:hover {
-  background-color: #5bc461;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .colorBox {
-    width: 80px;
-    height: 80px;
-  }
-
-  button, input {
-    padding: 8px;
-    font-size: 0.9em;
-  }
-}
-
-#watermark {
+/* Floating Toggle Button */
+.floating-toggle {
   position: fixed;
-  top: 700px;
-  left: 1090px;
-  width: 500px;
+  top: 20px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  font-size: 26px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #333;
+  transform: translateX(-240px);
+  transition: transform 0.3s ease;
+  padding-top: 80px;
   z-index: 1000;
 }
 
-#watermark:hover {
-  opacity: 1;
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+}
+
+.nav-links a {
+  color: white;
+  font-family: 'Century Gothic';
+  text-decoration: none;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.nav-links a:hover {
+  color: #ff4081;
+}
+
+/* Circular Action Menu */
+
+.circular-menu {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  width: 80px;
+  height: 80px;
+  display: none;
+}
+
+/* Main + button */
+.menu-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 40%;
+  background: #1b0158;
+  color: rgb(27, 230, 8);
+  font-size: 32px;
+  border: none;
   cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  transition: transform 0.35s ease;
+}
+
+.circular-menu.active .menu-btn {
+  transform: rotate(45deg);
+  background-color: #f50404;
+  color: #2b05d4;
+}
+
+/* Action buttons */
+.menu-item {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-image: linear-gradient(#86307b, #e61875);
+  border: none;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: scale(0);
+
+  transition:
+    transform 0.45s cubic-bezier(.68,-0.55,.27,1.55),
+    opacity 0.2s ease,
+    background-image 0.3s ease;
+   
+}
+
+
+/* Hover color change */
+.menu-item:hover {
+  background-image: linear-gradient(#f50404, #ff5f5f);
+}
+
+/* Active state */
+.circular-menu.active .menu-item {
+  opacity: 1;
+}
+
+/* Visual order: Copy → Save → Share */
+.circular-menu.active #copyAction {
+  transform: translate(0, -90px) scale(1);
+}
+
+.circular-menu.active #saveAction {
+  transform: translate(65px, -65px) scale(1);
+}
+
+.circular-menu.active #shareAction {
+  transform: translate(90px, 0) scale(1);
+}
+
+/* Hover feedback */
+.menu-item:hover {
+  transform: scale(1.15) translate(var(--x, 0), var(--y, 0));
+}
+
+
+#watermark {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 100px;
+  width: 100px;
+  z-index: 1000;
+  cursor: pointer;
+  display: none;
+}
+
+
+#watermark img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+/*About Page Styles */
+
+#aboutStuff {
+  font-family: 'Rockwell';
+}
+
+#badExplain {
+  font-family: 'Century Gothic';
+}
+
+.note {
+  font-size: 10px;
 }
