@@ -7,39 +7,36 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Color Palette Generator</h1>
 
-<!-- Form for user-defined palette generation -->
-<form id="colorForm">
-  <input type="text" id="name" placeholder="Enter a prompt/name" required>
-  <input type="number" id="palette-size" placeholder="Palette size" min="4" max="16" required>
-  <button type="submit">Generate Palette</button>
-</form>
+  <button id="toggleBtn" class="floating-toggle">☰</button>
 
-<!-- Input for random palette size -->
-<div>
-  <label for="random-palette-size">Random Palette Size:</label>
-  <input type="number" id="random-palette-size" placeholder="Random palette size" min="4" max="16" value="5">
-</div>
+  <div class="sidebar" id="sidebar">
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
 
-<!-- Button to randomize palette -->
-<button id="randomizeButton">Randomize Palette</button>
+  <h1 id="mainTitle">Color Palette Generator</h1>
 
-<!-- Container to display the generated palette -->
-<div id="paletteContainer"></div>
+  <form id="colorForm">
+    <input type="text" id="userInput" placeholder="Input..." required>
+    <input type="number" id="userSize" placeholder="Size" min="3" max="10" required>
+    <button type="submit" id="genBtn">Generate!</button>
+  </form>
 
-<!-- Buttons for actions after generating a palette -->
-<div id="buttonsContainer" style="display: none;">
-  <button id="copyButton">Copy Palette</button>
-  <button id="saveButton">Save Palette</button>
-  <button id="shareButton">Share Palette</button>
-  <button id="exportJSONButton">Export as JSON</button>
-  <button id="exportImageButton">Export as Image</button>
-</div>
+  <div id="colorContain"></div>
 
-<!-- Watermark GIF/Instagram Link-->
- <a href="https://www.instagram.com/tinyspacegremlin" target="_blank" id="watermark">
- <img src="images/TSG-Watermark.gif" id="watermark" alt="Watermark"/>
+  <div class="circular-menu" id="circularMenu">
+    <button id="mainActionBtn" class="menu-btn">+</button>
+    <button id="copyAction" class="menu-item">Copy</button>
+    <button id="saveAction" class="menu-item">Save</button>
+    <button id="shareAction" class="menu-item">Share</button>
+  </div>
+
+
+<a href="https://www.instagram.com/tinyspacegremlin" target="_blank" id="watermark">
+  <img src="images/watermark.jpg" alt="Watermark">
 </a>
 
   <script src="script.js"></script>
