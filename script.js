@@ -94,12 +94,12 @@ function showActionButtons(palette) {
 
 function copyPaletteToClipboard(palette) {
   navigator.clipboard.writeText(palette.join(", "))
-    .then(() => alert("The palette has been copied!"));
+    .then(() => alert("Palette copied. Paste it where you please!"));
 }
 
 function savePaletteToLocal(palette) {
   localStorage.setItem("savedPalette", JSON.stringify(palette));
-  alert("Palette saved to local storage!");
+  alert("Palette saved! When was it ever in trouble?");
 }
 
 function sharePalette(palette) {
@@ -108,6 +108,7 @@ function sharePalette(palette) {
     ? navigator.share({ text })
     : alert("Sharing not supported on this device.");
 }
+
 
 
 
