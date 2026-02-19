@@ -30,8 +30,9 @@ body {
 
 #colorContain {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 30px;
   flex-flow: row wrap;
 }
 
@@ -213,6 +214,7 @@ body {
 .note {
   font-size: 10px;
 }
+
 
 
 
