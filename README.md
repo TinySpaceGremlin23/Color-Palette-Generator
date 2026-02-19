@@ -1,3 +1,3 @@
-## Live Site
+
 ## Finally updated it after...forever....
-You can check out the live version of this project [here](https://tinyspacegremlin23.github.io/Color-Palette-Generator/).
+Live Version [here](https://tinyspacegremlin23.github.io/Color-Palette-Generator/).
