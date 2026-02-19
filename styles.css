@@ -145,6 +145,7 @@ body {
   background-image: linear-gradient(#2D5DA4, #5B8BD2);
   border: none;
   cursor: pointer;
+  color: black;
 
   opacity: 0;
   transform: scale(0);
@@ -160,6 +161,8 @@ body {
 /* Hover color change */
 .menu-item:hover {
   background-image: linear-gradient(#5B8BD2, #2D5DA4);
+  color: white;
+
 }
 
 /* Active state */
