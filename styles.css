@@ -33,6 +33,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  flex-flow: row wrap;
 }
 
 .colorBox {
@@ -41,7 +42,6 @@ body {
   margin: 5px;
   border-radius: 20px;
   border: #000 solid 3px;
-  flex-wrap: wrap;
 }
 
 /* Floating Toggle Button */
@@ -214,4 +214,5 @@ body {
 .note {
   font-size: 10px;
 }
+
 
