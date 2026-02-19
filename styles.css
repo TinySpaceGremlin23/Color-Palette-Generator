@@ -53,8 +53,8 @@ body {
   width: 45px;
   height: 45px;
   font-size: 26px;
-  background-color: #333;
-  color: white;
+  background-color: #B3A5E3;
+  color: #000000;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -215,6 +215,7 @@ body {
 .note {
   font-size: 10px;
 }
+
 
 
 
