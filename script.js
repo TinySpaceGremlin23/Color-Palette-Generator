@@ -52,7 +52,7 @@ function generateColorPalette(name, size) {
   let colors = [];
 
   for (let i = 0; i < size; i++) {
-    let seed = name.charCodeAt(i % name.length) + i * 564;
+    let seed = name.charCodeAt(i % name.length) + i * 160;
     let r = (seed * 123) % 256;
     let g = (seed * 456) % 256;
     let b = (seed * 789) % 256;
@@ -108,5 +108,6 @@ function sharePalette(palette) {
     ? navigator.share({ text })
     : alert("Sharing not supported on this device.");
 }
+
 
 
