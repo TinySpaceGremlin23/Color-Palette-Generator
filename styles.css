@@ -17,15 +17,20 @@ body {
 
 #genBtn {
   font-family: 'Century Gothic';
-  background-color: #fff;
+  background: #FFFFFF;
+  border: #000 solid 2px;
 }
 
 #userInput {
   font-family: 'Century Gothic';
+  background: #FFFFFF;
+  border: #000 solid 2px;
 }
 
 #userSize {
   font-family: 'Century Gothic';
+  background: #FFFFFF;
+  border: #000 solid 2px;
 }
 
 #colorContain {
@@ -115,7 +120,7 @@ body {
   border-radius: 40%;
   background: #477DCD;
   color: #593CC3;
-  font-size: 32px;
+  font-size: 36px;
   border: none;
   cursor: pointer;
   position: absolute;
@@ -215,7 +220,6 @@ body {
 .note {
   font-size: 10px;
 }
-
 
 
 
