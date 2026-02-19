@@ -68,7 +68,7 @@ body {
   left: 0;
   width: 200px;
   height: 100vh;
-  background-color: #333;
+  background-color: #A3BEE6;
   transform: translateX(-240px);
   transition: transform 0.3s ease;
   padding-top: 80px;
@@ -86,7 +86,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: #000000;
   font-family: 'Century Gothic';
   text-decoration: none;
   font-size: 22px;
@@ -94,7 +94,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ff4081;
+  color: #FFFFFF;
 }
 
 /* Circular Action Menu */
@@ -215,6 +215,7 @@ body {
 .note {
   font-size: 10px;
 }
+
 
 
 
