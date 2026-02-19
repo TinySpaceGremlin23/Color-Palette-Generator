@@ -1,7 +1,7 @@
 /*General Styles */
 
 body {
-  background-image: linear-gradient( 180deg, #C073E6, #E673D3, #E67399);
+  background-image: linear-gradient( 180deg, #477DCD, #9582D9, #B3A5E3);
   text-align: center;
   padding: 20px;
   height: 100%;
@@ -215,6 +215,7 @@ body {
 .note {
   font-size: 10px;
 }
+
 
 
 
