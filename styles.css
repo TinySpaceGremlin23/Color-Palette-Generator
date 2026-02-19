@@ -113,8 +113,8 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 40%;
-  background: #1b0158;
-  color: rgb(27, 230, 8);
+  background: #477DCD;
+  color: #593CC3;
   font-size: 32px;
   border: none;
   cursor: pointer;
@@ -127,8 +127,8 @@ body {
 
 .circular-menu.active .menu-btn {
   transform: rotate(45deg);
-  background-color: #f50404;
-  color: #2b05d4;
+  background-color: #593CC3;
+  color: #477DCD;
 }
 
 /* Action buttons */
@@ -215,6 +215,7 @@ body {
 .note {
   font-size: 10px;
 }
+
 
 
 
