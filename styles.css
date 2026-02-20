@@ -13,32 +13,40 @@ body {
 
 #mainTitle {
   font-family: 'Rockwell';
+  font-size: 50px;
+  padding: 20px;
+  margin-bottom: -10px;
+  
 }
 
 #genBtn {
   font-family: 'Century Gothic';
   background: #FFFFFF;
   border: #000 solid 2px;
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 #userInput {
   font-family: 'Century Gothic';
   background: #FFFFFF;
   border: #000 solid 2px;
+  font-size: 15px;
 }
 
 #userSize {
   font-family: 'Century Gothic';
   background: #FFFFFF;
   border: #000 solid 2px;
+  font-size: 15px;
 }
 
 #colorContain {
+  padding: 15px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 30px;
-  flex-flow: row wrap;
   max-width: 100%;
 }
 
@@ -47,7 +55,7 @@ body {
   height: 80px;
   margin: 5px;
   border-radius: 20px;
-  border: #000 solid 3px;
+  border: #000000 solid 3px;
 }
 
 /* Floating Toggle Button */
@@ -223,7 +231,6 @@ body {
 .note {
   font-size: 10px;
 }
-
 
 
 
