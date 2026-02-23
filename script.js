@@ -1,3 +1,5 @@
+//All the Script ans whatnot//
+
 document.addEventListener("DOMContentLoaded", () => {
 
  
@@ -108,6 +110,7 @@ function sharePalette(palette) {
     ? navigator.share({ text })
     : alert("Sharing not supported on this device.");
 }
+
 
 
 
